@@ -1,4 +1,4 @@
-## Factory Containers
+## Hashcode Factory Containers
 
 This project allows you to optionally build containers for your Foundries
 Factory. Based on the configuration of your factory's `ci-scripts/containers.yml`
