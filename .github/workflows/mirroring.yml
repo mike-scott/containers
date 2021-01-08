@@ -1,13 +1,14 @@
 name: Mirroring
 
-on: [push, delete]
+on: [push]
 
 jobs:
   to_foundries:
     runs-on: ubuntu-18.04
     steps:                                              # <-- must use actions/checkout@v1 before mirroring!
     - uses: actions/checkout@v1
-    - uses: mike-scott/mirror-action@master
+    - uses: foundriesio/mirror-action@master
       with:
-            REMOTE: 'https://source.foundries.io/factories/hashcode/containers.git'
+            REMOTE: "https://source.foundries.io/factories/hashcode/containers.git"
             GIT_ACCESS_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+            PUSH_ALL_REFS: "false"
